@@ -4,5 +4,5 @@ Titlu : Sport Universe
 Blog de sport
 
 ## Version
-2.5.0
+3.0.0
 
