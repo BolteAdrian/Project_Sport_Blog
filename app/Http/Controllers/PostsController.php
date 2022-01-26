@@ -150,7 +150,8 @@ $post->save();
         }
     
         // Redirect to index
-        return redirect()->action('PagesController@index');
+       
+        return redirect('/dashboard')->with('success', 'Import Successful.');
       }
 
 
@@ -211,7 +212,7 @@ $post->save();
         $post->categories()->attach($request->categories_id);
 
 
-        return redirect('/posts')->with('success', 'Post Created');
+        return redirect('/dashboard')->with('success', 'Post Created');
     }
 
     /**
@@ -305,7 +306,7 @@ $post->save();
         }
         $post->save();
         $post->categories()->attach($request->categories_id);
-        with('post', $post)->withCategories($categories);
+        //with('post', $post)->withCategories($categories);
         //return redirect('/posts')->with('post', $post)->withCategories($categories);
         return redirect('/posts')->with('success', 'Post Updated');
     }
@@ -336,6 +337,6 @@ $post->save();
         }
         
         $post->delete();
-        return redirect('/posts')->with('success', 'Post Removed');
+        return redirect('/dashboard')->with('success', 'Post Removed');
     }
 }
