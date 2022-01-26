@@ -18,8 +18,8 @@
 			<table class="table">
 				<thead>
 					<tr>
-						<th>#</th>
-						<th>Name</th>
+						<th></th>
+					
 					</tr>
 				</thead>
 			
@@ -28,7 +28,7 @@
 						@foreach ($categories as $category)
 						@if($category->name =="Football" || $category->name =="Handball" || $category->name =="Olimpics" || $category->name =="Tennis")
 					<tr>
-						<th>{{ $category->id }}</th>
+						
 						
 						<td><a href="/{{ $category->name }}">{{ $category->name }}</a></td>
 						<td>&nbsp;</td>
@@ -37,7 +37,7 @@
 					</tr>
 					@else
 					<tr>
-						<th>{{ $category->id }}</th>
+					
 						<td><a href="/default/{{ $category->name }}">{{ $category->name }}</a></td>
 				<td>&nbsp;</td>
 				<td>&nbsp;</td>
