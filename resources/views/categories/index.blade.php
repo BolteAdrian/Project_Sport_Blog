@@ -48,7 +48,7 @@
 				</tbody>
 			</table>
 		</div> <!-- end of .col-md-8 -->
-		
+		@if (Auth::check())
 		<div class="col-md-3">
 			<div class="well">
 				{!! Form::open(['route' => 'categories.store', 'method' => 'POST']) !!}
@@ -61,7 +61,7 @@
 				{!! Form::close() !!}
 			</div>
 		</div>
-		
+		@endif
 	</div>
 
 @endsection

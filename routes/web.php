@@ -15,37 +15,37 @@
 //home page
 Route::get('/', 'PagesController@index');
 
-//about section
+//about page
 Route::get('/about', 'PagesController@about');
 
 
 Route::post('/uploadFile', 'PostsController@uploadFile');
 
-//lista postari
+// posts
 Route::resource('posts', 'PostsController');
 
-//lista categorii
+// categories
 Route::resource('categories', 'CategoryController');
 
-//lista categorii
+//football
 Route::get('/Football', 'CategoryController@football');
 
-//lista categorii
+//handball
 Route::get('/Handball', 'CategoryController@handball');
 
-//lista categorii
+//tennis
 Route::get('/Tennis', 'CategoryController@tennis');
 
-//lista categorii
+//olimpics
 Route::get('/Olimpics', 'CategoryController@olimpics');
 
 
 
-//index categorie default
+//index for another categories
 Route::get('/default/{name}', ['uses' =>'CategoryController@default']);
 
 //auth
 Auth::routes();
 
-//pt autori (adaugare postari noi /stergere)
+//user s page for posts management
 Route::get('/dashboard', 'DashboardController@index');

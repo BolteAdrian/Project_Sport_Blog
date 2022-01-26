@@ -29,6 +29,8 @@ class PostsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+     //posts views
     public function index()
     {
        
@@ -42,6 +44,7 @@ class PostsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    //create function
     public function create()
     {
         $categories = Category::all();
@@ -50,7 +53,7 @@ class PostsController extends Controller
        
     }
 
-
+//upload file .csv 
     public function uploadFile(Request $request){
 
         if ($request->input('submit') != null ){
@@ -158,6 +161,8 @@ $post->save();
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
+     //save in database
     public function store(Request $request)
     {
 
@@ -231,6 +236,8 @@ $post->save();
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+     //edit page
     public function edit($id)
     {
         $post = Post::find($id);
