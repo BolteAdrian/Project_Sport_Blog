@@ -29,6 +29,8 @@ class PostsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+     //posts views
     public function index()
     {
        
@@ -42,6 +44,7 @@ class PostsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    //create function
     public function create()
     {
         $categories = Category::all();
@@ -50,7 +53,7 @@ class PostsController extends Controller
        
     }
 
-
+//upload file .csv 
     public function uploadFile(Request $request){
 
         if ($request->input('submit') != null ){
@@ -147,7 +150,8 @@ $post->save();
         }
     
         // Redirect to index
-        return redirect()->action('PagesController@index');
+       
+        return redirect('/dashboard')->with('success', 'Import Successful.');
       }
 
 
@@ -158,6 +162,8 @@ $post->save();
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
+     //save in database
     public function store(Request $request)
     {
 
@@ -206,7 +212,7 @@ $post->save();
         $post->categories()->attach($request->categories_id);
 
 
-        return redirect('/posts')->with('success', 'Post Created');
+        return redirect('/dashboard')->with('success', 'Post Created');
     }
 
     /**
@@ -231,6 +237,8 @@ $post->save();
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+     //edit page
     public function edit($id)
     {
         $post = Post::find($id);
@@ -298,7 +306,7 @@ $post->save();
         }
         $post->save();
         $post->categories()->attach($request->categories_id);
-        with('post', $post)->withCategories($categories);
+        //with('post', $post)->withCategories($categories);
         //return redirect('/posts')->with('post', $post)->withCategories($categories);
         return redirect('/posts')->with('success', 'Post Updated');
     }
@@ -329,6 +337,6 @@ $post->save();
         }
         
         $post->delete();
-        return redirect('/posts')->with('success', 'Post Removed');
+        return redirect('/dashboard')->with('success', 'Post Removed');
     }
 }

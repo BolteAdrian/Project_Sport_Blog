@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', '| Football')
+@section('title', '| Footballll')
 
 @section('content')
     

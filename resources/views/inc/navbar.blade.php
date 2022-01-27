@@ -1,4 +1,5 @@
 <nav class="navbar navbar-inverse">
+<img src="https://sportuniverse.com.mx/wp-content/uploads/2021/03/logo-color-heder-3.png" alt="">
     <div class="container">
         <div class="navbar-header">
 
@@ -11,7 +12,14 @@
 
             <!-- Branding Image -->
             <a class="navbar-brand" href="{{ url('/') }}">
-                {{ config('app.name', 'Laravel') }}
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
             </a>
         </div>
 
