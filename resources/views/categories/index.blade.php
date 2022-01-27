@@ -62,7 +62,7 @@
 		@endif
 
 	</div>
-	@endif
+	
 </div>
 
 @endsection
