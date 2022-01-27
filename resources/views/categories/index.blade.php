@@ -59,6 +59,10 @@
 
 			{!! Form::close() !!}
 		</div>
+<<<<<<< HEAD
+=======
+		@endif
+>>>>>>> 32a39726b11e38dc69c5ab5b009160faa4bee804
 	</div>
 	@endif
 </div>

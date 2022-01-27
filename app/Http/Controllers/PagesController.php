@@ -13,12 +13,16 @@ use DB;
 //controller pentru home page si about
 class PagesController extends Controller
 {
+
+    //home page
     public function index(){
        
         $posts = Post::orderBy('created_at','desc')->paginate(10);
         return view('pages.index')->with('posts', $posts);
     }
 
+
+    // about page 
     public function about(){
         $title = 'About Us';
         return view('pages.about')->with('title', $title);
