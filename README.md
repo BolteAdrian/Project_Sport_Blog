@@ -21,6 +21,7 @@ Authentication - authentication is based on email and password (Figure 4);
 ![image](https://user-images.githubusercontent.com/87446991/166158043-3677b3c0-4c6a-42d3-94c1-978bc46319ba.png)
 
 2.Posts managing
+Click on your name from the left-up corner and select Dashboard
 
 2.1 Ad new post
 2.1.1 Via import .csv file
