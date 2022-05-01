@@ -2,17 +2,19 @@
 
 @section('content')
 <div class="home-page">
+    
     <a href="/posts" class="btn btn-primary">Go Back</a>
-    <h1>{{$post->title}}</h1>
+   
+    <h1 class="well" align="center" style="margin:50px 100px">{{$post->title}}</h1>
 
   
     @if($post->cover_image != "noimage.jpg" && $post->cover_image != "null")
-    <img src="/storage/cover_images/{{$post->cover_image}}"  style="width:700px;height:200px; vertical-align:middle;margin:-10px 350px">
+    <img src="/storage/cover_images/{{$post->cover_image}}"   style="width:500px;height:200px; vertical-align:middle;margin:-10px 550px">
 
     @endif
     <br><br>
- 
-    <div style="margin:200px 100px">
+    
+    <div class="well" style="margin:200px 100px">
         {!!$post->body!!}
     </div>
     <hr>
@@ -29,6 +31,7 @@
     {!!Form::close()!!}
     @endif
     @endif
+
 </div>
 </div>
 
