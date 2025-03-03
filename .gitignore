@@ -1,10 +1,40 @@
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+/build/
+
+
+# Node.js modules
 /node_modules
+
+# Public files generated during build
 /public/hot
 /public/storage
+
+# Laravel storage files
 /storage/*.key
-/vendor
+
+# Vendor files (Composer dependencies)
+vendor/
+
+# IDEs and editors
 /.idea
+
+# Vagrant files
 /.vagrant
 Homestead.json
 Homestead.yaml
+
+# Logs
 npm-debug.log
+
+/vendor
